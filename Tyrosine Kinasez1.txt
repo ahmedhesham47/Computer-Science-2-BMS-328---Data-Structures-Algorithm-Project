@@ -1,0 +1,4 @@
+Protein Name: 	E
+Protein Interaction Count: 	3
+Protein Interaction Strength: 	14
+Protein Interactions: 	Z B G 
