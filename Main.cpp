@@ -2,55 +2,51 @@
 //
 #include <vector>
 #include "Data Structures/Graph/MatrixGraph.cpp"
-#include "../Project/Protein/Protein.h"
 #include <iostream>
+#include "Protein/Protein.h"
 using namespace std;
+
+ostream& operator<<(ostream& os, Protein const& m) {
+	return os << m.getName();
+}
 
 int main()
 {
-	//std::cout << "test"; 
-	Protein protein1 = Protein("Z", 30, Activator);
-	Protein protein2 = Protein("A", 31, Activator);
-	Protein protein3 = Protein("B", 32, Activator);
-	Protein protein4 = Protein("C", 33, Activator);
-	Protein protein5 = Protein("D", 34, Deactivator);
-	Protein protein6 = Protein("E", 35, Activator);
-	Protein protein7 = Protein("F", 36, Activator);
-	Protein protein8 = Protein("G", 37, Neutral);
-	Protein protein9 = Protein("H", 38, Neutral);
-	Protein protein10 = Protein("I", 39, Activator);
-	Protein protein11 = Protein("J", 40, Activator);
-	Protein protein12 = Protein("K", 41, Activator);
-	
-
+	Protein protein1 = Protein("Z", 30, 200, Activator, Cytosolic, Enzyme);
+	Protein protein2 = Protein("A", 31, 200, Activator, Cytosolic, Regulator);
+	Protein protein3 = Protein("B", 32, 200, Activator, Cytosolic, Regulator);
+	Protein protein4 = Protein("C", 33, 200, Activator, Cytosolic, Regulator);
+	Protein protein5 = Protein("D", 34, 200, Deactivator, Cytosolic, Regulator);
+	Protein protein6 = Protein("E", 35, 200, Activator, Cytosolic, Regulator);
+	Protein protein7 = Protein("F", 36, 200, Activator, Cytosolic, Regulator);
+	Protein protein8 = Protein("G", 37, 200, Neutral, Cytosolic, Regulator);
+	Protein protein9 = Protein("H", 38, 200, Neutral, Cytosolic, Regulator);
+	Protein protein10 = Protein("I", 39, 200, Activator, Cytosolic, Regulator);
+	Protein protein11 = Protein("J", 40, 200, Activator, Cytosolic, Regulator);
+	Protein protein12 = Protein("K", 41, 200, Activator, Cytosolic, Regulator);
+	 
+	 
 	MatrixGraph<Protein> ProteinNetwork;
 	ProteinNetwork.AddProtein(protein1);
 	ProteinNetwork.AddProtein(protein2);
 	ProteinNetwork.AddProtein(protein3);
 	ProteinNetwork.AddProtein(protein4);
-	ProteinNetwork.AddProtein(protein5);
+	ProteinNetwork.AddProtein(protein5); 
 	ProteinNetwork.AddProtein(protein6);
-	ProteinNetwork.AddProtein(protein7);
-	ProteinNetwork.AddProtein(protein8);
-	ProteinNetwork.AddProtein(protein9);
-	ProteinNetwork.AddProtein(protein10);
-	ProteinNetwork.AddProtein(protein11);
 
-	ProteinNetwork.AddInteraction(protein6, protein8, 7);
-	ProteinNetwork.AddInteraction(protein8, protein6, 2);
-	ProteinNetwork.AddInteraction(protein6, protein3, 5);
-	ProteinNetwork.AddInteraction(protein6, protein1, 7);
-	ProteinNetwork.AddInteraction(protein3, protein1, 5);
-	ProteinNetwork.AddInteraction(protein3, protein2, 7);
-	ProteinNetwork.AddInteraction(protein3, protein8, 5);
-	ProteinNetwork.AddInteraction(protein2, protein7, 11);
-	ProteinNetwork.AddInteraction(protein9, protein11, 11);
-	ProteinNetwork.AddInteraction(protein11, protein4, 14);
-	ProteinNetwork.saveFile("testt7");
-	ProteinNetwork.SaveProtein("tst2", protein6);
+	ProteinNetwork.AddInteraction(protein1, protein2, 7);
+	ProteinNetwork.AddInteraction(protein2, protein3, 3);
+	ProteinNetwork.AddInteraction(protein3, protein4, 10);
+	ProteinNetwork.AddInteraction(protein4, protein5, 6);
+	//ProteinNetwork.AddInteraction(protein5, protein6, 5);
+	//ProteinNetwork.AddInteraction(protein6, protein1, 21);
 
-	//ProteinNetwork.DisplayInteracting(protein6);
-	ProteinNetwork.PrintNetwork();
+	//ProteinNetwork.PrintNetwork(); 
+	//cout << ProteinNetwork.sortProteinsAccordingToCountOfInteractions() << endl;
+	//cout << ProteinNetwork.sortProteinsAccordingToCountOfInteractions()[2];
+	ProteinNetwork.SaveProtein("protein1", protein1);  
+	ProteinNetwork.saveFile("proteins"); 
+
 	/*
 	Protein* arrayI = new Protein[11];
 	arrayI = ProteinNetwork.sortProteinsAccordingToCountOfInteractions();
@@ -63,6 +59,18 @@ int main()
 	for (int i = 0; i < 11; i++) {
 		cout << arrayI[i] << " ";
 	}
+
+	LinkedList<Protein>* uninteractingProteins = ProteinNetwork.FindUninteractingProteins();
+	LinkedList<Protein>* interactingProteins = ProteinNetwork.FindInteractingProteins();
+
+	cout << endl << "Number of un-interacting proteins: " << ProteinNetwork.numOfUninteractingProteins() << endl;
+	cout << "Number of interacting proteins: " << ProteinNetwork.numOfInteractingProteins();
+	uninteractingProteins->PrintList();
+	interactingProteins->PrintList();
+
+	MatrixGraph<Protein>* toCloneFrom = &ProteinNetwork;
+	MatrixGraph<Protein>* cloned = ProteinNetwork.cloneNetwork(toCloneFrom);
+	cloned->PrintNetwork();
 	
 	LinkedList<Protein>* leastInteracting = ProteinNetwork.FindLeastInteracting();
 	LinkedList<Protein>* mostInteracting = ProteinNetwork.FindMostInteracting();

@@ -1,0 +1,11 @@
+Protein Name: 	Z
+Protein ID: 	30
+Protein Amino Acid Count: 200
+Protein Type: 	Activator
+Protein Location: 	Cytosolic
+Protein Function: 	Enzyme
+Protein Color: 	White
+Protein Enzymatic Role: 	Not yet defined
+Protein Interaction Count: 	1
+Protein Interaction Strength: 	7
+Protein Interactions: 	A 
