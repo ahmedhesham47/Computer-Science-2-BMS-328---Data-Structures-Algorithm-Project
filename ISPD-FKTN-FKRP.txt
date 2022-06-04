@@ -1,0 +1,31 @@
+		DPM3	POMT2	DOLK	POMGNT1	FKTN	POMGNT2	FKRP	B3GAL	TMEM5	POMT1	ISPD	
+--------------------------------------------------------------------------------------------------------------
+DPM3	|	0	2	3	2	1	2	1	1	1	2	1	
+POMT2	|	2	0	3	3	1	3	1	1	2	5	1	
+DOLK	|	3	3	0	1	2	2	1	2	1	3	2	
+POMGNT1	|	2	3	1	0	1	3	2	1	3	3	1	
+FKTN	|	1	1	2	1	0	1	2	1	2	1	3	
+POMGNT2	|	2	3	2	3	1	0	2	2	2	3	2	
+FKRP	|	1	1	1	2	2	2	0	1	2	1	1	
+B3GAL	|	1	1	2	1	1	2	1	0	1	1	1	
+TMEM5	|	1	2	1	3	2	2	2	1	0	2	1	
+POMT1	|	2	5	3	3	1	3	1	1	2	0	1	
+ISPD	|	1	1	2	1	3	2	1	1	1	1	0	
+
+Total Protein Count: 	11
+Total Interactive Proteins Count: 	11
+Total Non-Interactive Proteins Count: 	0
+Total Interactions Count: 	55
+Total Interactions Strength: 	97
+Is every protein interacting? 	1
+Most interacting proteins in terms of interactions count: 	DPM3 POMT2 DOLK POMGNT1 FKTN POMGNT2 FKRP B3GAL TMEM5 POMT1 ISPD 
+Least interacting proteins in terms of interactions count: 	DPM3 POMT2 DOLK POMGNT1 FKTN POMGNT2 FKRP B3GAL TMEM5 POMT1 ISPD 
+Proteins with strongest individual interaction: 	POMT2 POMT1 
+Proteins with strongest total interactions strength: 	POMT2 POMGNT2 POMT1 
+Proteins with weakest total interactions strength: 	B3GAL 
+All interacting proteins: 	DPM3 POMT2 DOLK POMGNT1 FKTN POMGNT2 FKRP B3GAL TMEM5 POMT1 ISPD 
+All Non-interacting proteins: 	
+Proteins Sorted in Interactions Count (lowest to highest): 	DPM3 POMT2 DOLK POMGNT1 FKTN POMGNT2 FKRP B3GAL TMEM5 POMT1 ISPD 
+Proteins Sorted in Interactions Strength (weakest to strongest): 	B3GAL FKRP ISPD FKTN DPM3 TMEM5 DOLK POMGNT1 POMT2 POMGNT2 POMT1 
+Total Connectivity Percent: 100
+Average Clustering Coefficient: 1

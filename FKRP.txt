@@ -1,0 +1,13 @@
+Protein Name: 	FKRP
+Protein ID: 	36
+Protein Amino Acid Count: 200
+Protein Type: 	Activator
+Protein Location: 	Cytosolic
+Protein Function: 	Regulator
+Protein Color: 	White
+Protein Interaction Count: 	10
+Protein Interaction Strength: 	14
+Protein Interactions: 	DPM3 POMT2 DOLK POMGNT1 FKTN POMGNT2 B3GAL TMEM5 POMT1 ISPD 
+Fraction of total interactions count: 0.181818
+Fraction of total interactions strength: 0.14433
+Clustering Coefficient: 1
