@@ -1,0 +1,13 @@
+Protein Name: 	h
+Protein ID: 	0
+Protein Amino Acid Count: 100
+Protein Type: 	Neutral
+Protein Location: 	Cytosolic
+Protein Function: 	Regulator
+Protein Color: 	Blue
+Protein Interaction Count: 	2
+Protein Interaction Strength: 	3
+Protein Interactions: 	g c 
+Fraction of total interactions count: 0.666667
+Fraction of total interactions strength: 0.5
+Clustering Coefficient: 1

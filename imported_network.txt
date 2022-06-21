@@ -1,0 +1,23 @@
+		h	g	c	
+------------------------------
+h	|	0	1	2	
+g	|	1	0	3	
+c	|	2	3	0	
+
+Total Protein Count: 	3
+Total Interactive Proteins Count: 	3
+Total Non-Interactive Proteins Count: 	0
+Total Interactions Count: 	3
+Total Interactions Strength: 	6
+Is every protein interacting? 	1
+Most interacting proteins in terms of interactions count: 	h g c 
+Least interacting proteins in terms of interactions count: 	h g c 
+Proteins with strongest individual interaction: 	g c 
+Proteins with strongest total interactions strength: 	c 
+Proteins with weakest total interactions strength: 	h 
+All interacting proteins: 	h g c 
+All Non-interacting proteins: 	
+Proteins Sorted in Interactions Count (lowest to highest): 	h g c 
+Proteins Sorted in Interactions Strength (weakest to strongest): 	h g c 
+Total Connectivity Percent: 100
+Average Clustering Coefficient: 1
